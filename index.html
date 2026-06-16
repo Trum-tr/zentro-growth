@@ -8,54 +8,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Open Sans', Roboto, Arial, sans-serif;
-      background: #0B1E3B;
-      color: #FFFFFF;
-      line-height: 1.7;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 700;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', Roboto, Arial, sans-serif; background: #0B1E3B; color: #FFFFFF; line-height: 1.7; }
+    h1, h2, h3 { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; }
     h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.15; }
     h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); line-height: 1.25; }
     p { line-height: 1.8; }
-
     .section { padding: 80px 20px; }
     .container { max-width: 1100px; margin: 0 auto; }
-
     .bg-dark  { background: #0B1E3B; }
     .bg-mid   { background: #0F2647; }
     .text-gold { color: #C9A55C; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 28px;
-      border-radius: 8px;
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
-    }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 28px; border-radius: 8px; font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1rem; text-decoration: none; border: none; cursor: pointer; transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease; }
     .btn:hover { transform: translateY(-2px); opacity: 0.92; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
     .btn-whatsapp { background: #25D366; color: #fff; }
     .btn-instagram { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); color: #fff; }
@@ -63,7 +28,6 @@
     .btn-outline { background: transparent; border: 2px solid #C9A55C; color: #C9A55C; }
     .btn-outline:hover { background: #C9A55C; color: #0B1E3B; }
     .btn-group { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
-
     .gold-line { width: 60px; height: 4px; background: #C9A55C; border-radius: 2px; margin: 16px 0 32px; }
     .icon-wa { width: 22px; height: 22px; fill: #fff; }
     .icon-ig { width: 22px; height: 22px; fill: #fff; }
@@ -74,12 +38,13 @@
     .hero-logo-mark { width: 48px; height: 48px; background: #C9A55C; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', Arial, sans-serif; font-weight: 800; font-size: 1.4rem; color: #0B1E3B; flex-shrink: 0; }
     .hero-brand-name { font-family: 'Montserrat', Arial, sans-serif; font-weight: 800; font-size: 1.3rem; color: #fff; letter-spacing: 0.04em; }
     .hero-brand-tagline { font-size: 0.8rem; color: #C9A55C; letter-spacing: 0.08em; text-transform: uppercase; }
-    #hero h1 { margin-bottom: 12px; }
-    .hero-sub { font-family: 'Montserrat', Arial, sans-serif; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 600; color: #C9A55C; margin-bottom: 28px; }
-    .hero-offer { font-size: 1rem; color: #d0dce8; max-width: 520px; }
-    .hero-offer ul { list-style: none; margin-top: 12px; }
+    #hero h1 { margin-bottom: 20px; }
+    .hero-offer { font-size: 1rem; color: #d0dce8; max-width: 560px; }
+    .hero-offer ul { list-style: none; margin-top: 10px; margin-bottom: 4px; }
     .hero-offer ul li { padding: 4px 0 4px 20px; position: relative; }
     .hero-offer ul li::before { content: '—'; position: absolute; left: 0; color: #C9A55C; }
+    .hero-pilot { margin-top: 24px; color: #C9A55C; font-family: 'Montserrat', Arial, sans-serif; font-size: 1.05rem; font-weight: 600; }
+    .hero-pilot strong { color: #fff; }
 
     #problem { background: #0F2647; }
     .problem-box { background: #112952; border-left: 4px solid #C9A55C; border-radius: 0 12px 12px 0; padding: 32px 36px; max-width: 700px; }
@@ -105,9 +70,6 @@
     .step-body { background: #112952; border-radius: 12px; padding: 20px 24px; flex: 1; }
     .step-title { font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1rem; color: #fff; margin-bottom: 8px; }
     .step-desc { font-size: 0.875rem; color: #a8bfd4; line-height: 1.7; }
-    .step-desc ul { list-style: none; margin-top: 8px; }
-    .step-desc ul li { padding: 3px 0 3px 20px; position: relative; }
-    .step-desc ul li::before { content: '—'; position: absolute; left: 0; color: #C9A55C; }
 
     #result { background: #0B1E3B; }
     .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 40px; }
@@ -176,14 +138,20 @@
       </div>
     </div>
     <h1>Zentro<br /><span class="text-gold">Диагностика роста бизнеса</span></h1>
-    <p class="hero-sub">3 дня до карты точек роста и плана выручки +X%</p>
     <div class="hero-offer">
-      <p>Помогаю малым бизнесам увеличить выручку за 3 недели через:</p>
+      <p>Помогаю малым бизнесам увеличить выручку за 3 недели:</p>
       <ul>
-        <li>выявление точек роста,</li>
-        <li>повышение эффективности процессов,</li>
-        <li>чёткий план внедрения с цифрами.</li>
+        <li>выявляю 5–10 точек роста,</li>
+        <li>рассчитываю эффект в рублях и %,</li>
+        <li>даю план внедрения на 3 недели с KPI.</li>
       </ul>
+      <p style="margin-top:20px;">Результат:</p>
+      <ul>
+        <li>отчёт + презентация,</li>
+        <li>карта точек роста,</li>
+        <li>план с цифрами.</li>
+      </ul>
+      <p class="hero-pilot">Пилотная цена для первых 5 клиентов: <strong>15 000 ₽</strong></p>
     </div>
     <div class="btn-group">
       <a class="btn btn-whatsapp" href="https://wa.me/79265848895" target="_blank" rel="noopener">
@@ -262,24 +230,23 @@
         <ul class="pricing-features"><li>Business Boost Diagnostic (3 дня)</li><li>Отчёт + презентация</li><li>Карта точек роста</li><li>План на 3 недели</li></ul>
         <div class="pricing-price">15 000 ₽</div>
         <div class="pricing-note">пилотная цена для первых 5 клиентов</div>
-        <a class="btn btn-gold" href="https://wa.me/79265848895?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20Diagnostic%20(15%20000%20%E2%82%BD)." target="_blank" rel="noopener">Выбрать пакет</a>
+        <a class="btn btn-gold" href="https://wa.me/79265848895?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20Diagnostic%20(15%20000%20%E2%82%BD)" target="_blank" rel="noopener">Выбрать пакет</a>
       </div>
       <div class="pricing-card">
         <div class="pricing-label">Расширенный</div><div class="pricing-name">Diagnostic + Plan</div>
-        <ul class="pricing-features"><li>Diagnostic (всё из базового)</li><li>2 недели поддержки внедрения</li><li>Еженедельные корректвы</li><li>Чек-листы и шаблоны</li></ul>
+        <ul class="pricing-features"><li>Diagnostic (всё из базового)</li><li>2 недели поддержки внедрения</li><li>Еженедельные корректировки</li><li>Чек-листы и шаблоны</li></ul>
         <div class="pricing-price">35 000 ₽</div><div class="pricing-note">&nbsp;</div>
-        <a class="btn btn-outline" href="https://wa.me/79265848895?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20Diagnostic%20%2B%20Plan%20(35%20000%20%E2%82%BD)." target="_blank" rel="noopener">Выбрать пакет</a>
+        <a class="btn btn-outline" href="https://wa.me/79265848895?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20Diagnostic%20%2B%20Plan%20(35%20000%20%E2%82%BD)" target="_blank" rel="noopener">Выбрать пакет</a>
       </div>
       <div class="pricing-card">
         <div class="pricing-label">Premium</div><div class="pricing-name">Diagnostic + Implementation</div>
         <ul class="pricing-features"><li>Diagnostic (всё из базового)</li><li>4 недели полного внедрения</li><li>Работа с сотрудниками</li><li>Контроль KPI</li><li>Финальный отчёт с реальными цифрами</li></ul>
         <div class="pricing-price">70 000 ₽</div><div class="pricing-note">&nbsp;</div>
-        <a class="btn btn-outline" href="https://wa.me/79265848895?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20Diagnostic%20%2B%20Implementation%20(70%20000%20%E2%82%BD)." target="_blank" rel="noopener">Выбрать пакет</a>
+        <a class="btn btn-outline" href="https://wa.me/79265848895?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20Diagnostic%20%2B%20Implementation%20(70%20000%20%E2%82%BD)" target="_blank" rel="noopener">Выбрать пакет</a>
       </div>
     </div>
   </div>
 </section>
-
 
 <section id="cta" class="section bg-dark" style="text-align:center;">
   <div class="container">
